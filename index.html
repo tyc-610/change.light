@@ -1,14 +1,31 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<title>Adjust Image Brightness</title>  
-</head>  
-<body>  
-    <img id="sourceImage" src="https://github.com/tyc-610/change.light.github.io/blob/main/p1.jpeg" alt="Source Image" style="display:none;">  
-    <canvas id="canvas"></canvas>  
-    <br>  
-    <input type="range" id="brightnessSlider" min="-1" max="1" step="0.01" value="0">  
-    <script src="brightness.js"></script>  
-</body>  
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变图片亮度</title>
+    <style>
+        #image {
+            width: 300px;
+            height: auto;
+            transition: filter 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>改变图片亮度</h1>
+    <input type="range" id="brightnessRange" min="0" max="200" value="100">
+    <br>
+    <img id="image" src="D:\code\编程杂类（大三）\change\p1.jpeg" alt="示例图片">
+
+    <script>
+        const brightnessRange = document.getElementById('brightnessRange');
+        const image = document.getElementById('image');
+
+        brightnessRange.addEventListener('input', function() {
+            const brightnessValue = brightnessRange.value;
+            image.style.filter = `brightness(${brightnessValue}%)`;
+        });
+    </script>
+</body>
 </html>
