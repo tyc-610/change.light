@@ -41,8 +41,5 @@ window.onload = function() {
         return Math.min(255, Math.max(0, value));  
     }  
   
-    // 确保图片有URL  
-    if (!img.src) {  
-        img.src = 'https://github.com/tyc-610/change.light.github.io/blob/main/p1.jpeg'; 
-    }  
+   
 };
