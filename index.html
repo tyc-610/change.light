@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片储藏库</title>
-    <style>
-        h1{
-            color: crimson;font-size: 80px;font-style: italic;
-            font-weight: 800;font-family:cursive;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>图片储存库</h1>
-    <div class="full-img">
-        <img class="displayed-img" src="https://github.com/tyc-610/change.light.github.io/blob/main/p1.jpeg">
-        <div class="overlay" style="background-color: rgba(0, 0, 0, 0);"></div>
-      </div>
-      <div class="thumb-bar">
-        <img src="back.jpg" 
-        <img src="p1.jpeg" 
-        <img src="p2.jpeg" 
-        <img src="p3.jpeg"
-        <img src="p4.jpg" 
-            </div>
-           <canvas id="canvas"></canvas>  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>Adjust Image Brightness</title>  
+</head>  
+<body>  
+    <img id="sourceImage" src="https://github.com/tyc-610/change.light.github.io/blob/main/p1.jpeg" alt="Source Image" style="display:none;">  
+    <canvas id="canvas"></canvas>  
     <br>  
     <input type="range" id="brightnessSlider" min="-1" max="1" step="0.01" value="0">  
-<script src="brightness.js"></script>  
-</body>
+    <script src="brightness.js"></script>  
+</body>  
 </html>
-
