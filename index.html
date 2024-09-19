@@ -8,24 +8,24 @@
         #image {
             width: 1000px;
             height: auto;
-            transition: filter 0.3s;
+            transition: filter 0.3s;//设置了一个transition属性，使得当图片的filter属性变化时（即亮度改变时），这个变化会以0.3秒的时间平滑过渡。
         }
     </style>
 </head>
 <body>
     <h1>改变图片亮度</h1>
-    <input type="range" id="brightnessRange" min="0" max="200" value="100">
+    <input type="range" id="brightnessRange" min="0" max="200" value="100">//添加滑块，设置范围，用于控制亮度
     <br>
     <img id="image" src="https://q6.itc.cn/q_70/images03/20240126/4eaa7950e4214e8e83965f851318a03d.jpeg">
 
     <script>
         const brightnessRange = document.getElementById('brightnessRange');
         const image = document.getElementById('image');
-
+        // 获取滑块和图片的dom元素
         brightnessRange.addEventListener('input', function() {
             const brightnessValue = brightnessRange.value;
             image.style.filter = `brightness(${brightnessValue}%)`;
-        });
+        });//添加input事件监听器
     </script>
 </body>
 </html>
