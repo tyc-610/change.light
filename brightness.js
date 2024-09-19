@@ -43,6 +43,6 @@ window.onload = function() {
   
     // 确保图片有URL  
     if (!img.src) {  
-        img.src = 'p1.jpeg'; 
+        img.src = 'https://github.com/tyc-610/change.light.github.io/blob/main/p1.jpeg'; 
     }  
 };
